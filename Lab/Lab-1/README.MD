@@ -34,14 +34,14 @@ Compare Virtual Machines and Containers by deploying Nginx web server in both en
 ### 1. Install VirtualBox
 Download and install VirtualBox from [official website](https://www.virtualbox.org/)
 
-![VirtualBox Installation](Screenshots/Screenshot(833).png)
+![VirtualBox Installation](Screenshots/Picture1.png)
 
 ### 2. Install Vagrant
 Install Vagrant and verify:
 ```bash
 vagrant --version
 ```
-![Vagrant Installation](Screenshots/Screenshot(835).png)
+![Vagrant Installation](Screenshots/Picture2.png)
 
 ### 3. Create Ubuntu VM
 ```bash
@@ -51,7 +51,7 @@ vagrant init ubuntu/jammy64
 vagrant up
 vagrant ssh
 ```
-![Vagrant Setup](Screenshots/Screenshot(836).png)
+![Vagrant Setup](Screenshots/Picture3.png)
 
 ### 4. Install Nginx in VM
 ```bash
@@ -60,8 +60,8 @@ sudo apt install -y nginx
 sudo systemctl start nginx
 curl localhost
 ```
-![Nginx VM](Screenshots/Screenshot(837).png)
-![Nginx VM Installed](Screenshots/Screenshot(838).png)
+![Nginx VM](Screenshots/Picture7.png)
+![Nginx VM Installed](Screenshots/Picture8.png)
 
 ### 5. Cleanup
 ```bash
@@ -84,7 +84,7 @@ Reboot after installation.
 ```bash
 wsl --install -d Ubuntu
 ```
-![WSL Ubuntu](Screenshots/Screenshot(840).png)
+
 
 ### 3. Install Docker
 ```bash
@@ -93,15 +93,15 @@ sudo apt install -y docker.io
 sudo systemctl start docker
 sudo usermod -aG docker $USER
 ```
-![Docker Installation](screenshots/docker-install.png)
 
-### 4. Run Nginx Container
+
+### 4. Run Ubuntu Container
 ```bash
-docker pull nginx
+docker pull ubuntu
 docker run -d -p 8080:80 --name nginx-container nginx
 curl localhost:8080
 ```
-![Nginx Container](Screenshots/Screenshot(841).png)
+![Nginx Container](Screenshots/Picture10.png)
 
 ---
 
@@ -119,10 +119,10 @@ systemd-analyze
 docker stats
 free -h
 ```
-![Resource Comparison](Screenshots/Screenshot(839).png)
-![Resource Comparison](Screenshots/Screenshot(840).png)
-![Resource Comparison](Screenshots/Screenshot(843).png)
-![Resource Comparison](Screenshots/Screenshot(844).png)
+![Resource Comparison](Screenshots/Picture14.png)
+![Resource Comparison](Screenshots/Picture13.png)
+![Resource Comparison](Screenshots/Picture12.png)
+
 ---
 
 ## Comparison Results
