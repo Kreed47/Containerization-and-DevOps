@@ -26,8 +26,8 @@ This section contains practical experiments and hands-on exercises to apply DevO
 
 ### Lab Experiments
 
-- [Lab 1: Perfomance Comparision](Lab/Lab-1/README.MD)
-- [Lab 2: Working with nginx in Docker](Lab/Lab-2/README.MD)
+- [Lab 1: Perfomance Comparision](Lab/Lab-1)
+- [Lab 2: Working with nginx in Docker](Lab/Lab-2)
 
 ---
 
