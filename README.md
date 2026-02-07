@@ -18,6 +18,7 @@ This section includes notes, and documentation related to Containerization and D
 
 - [1: Working with Docker and Dockerfile](Theory/Docker-Images)
 - [2: Working with Docker API](Theory/Docker-API/)
+- [3: Working with Dockerfile to run Python script](Theory/Class-Test)
 
 ---
 
