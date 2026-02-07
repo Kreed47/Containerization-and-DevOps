@@ -46,7 +46,7 @@ After successful image creation, the Docker image is tagged and pushed to Docker
 
 - #### Docker Image Build Process
 
-  ![Build Java App](C:\Users\sshar\Downloads\Containerization-and-DevOps\Theory\Docker-Images\Screenshots\Screenshot 2026-02-06 124122.png)
+  ![Build Java App](Screenshots\Screenshot 2026-02-06 124122.png)
 
 - #### Java Application Running in Container
 
