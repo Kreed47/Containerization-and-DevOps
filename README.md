@@ -32,7 +32,7 @@ This section contains practical experiments and hands-on exercises to apply DevO
 
 - [Lab 1: Perfomance Comparision](Lab/Lab-1)
 - [Lab 2: Working with nginx in Docker](Lab/Lab-2)
-- [Lab 3: Deploying NGINX using diffrent base images and compairng image layers](Lab/Lab-2)
+- [Lab 3: Deploying NGINX using diffrent base images and compairng image layers](Lab/Lab-3)
 
 ---
 
