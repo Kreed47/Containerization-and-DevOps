@@ -19,6 +19,8 @@ This section includes notes, and documentation related to Containerization and D
 - [1: Working with Docker and Dockerfile](Theory/Docker-Images)
 - [2: Working with Docker API](Theory/Docker-API/)
 - [3: Working with Dockerfile to run Python script](Theory/Class-Test)
+- [4: Multistage file comparison](Theory/Multistage)
+- [5: Working with docker volumes to load html pages](Theory/Volume/html/)
 
 ---
 
@@ -30,6 +32,7 @@ This section contains practical experiments and hands-on exercises to apply DevO
 
 - [Lab 1: Perfomance Comparision](Lab/Lab-1)
 - [Lab 2: Working with nginx in Docker](Lab/Lab-2)
+- [Lab 3: Deploying NGINX using diffrent base images and compairng image layers](Lab/Lab-2)
 
 ---
 
