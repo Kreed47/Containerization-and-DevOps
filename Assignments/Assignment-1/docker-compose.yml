@@ -1,0 +1,36 @@
+services:
+
+  db:
+    build: ./database
+    container_name: postgres-db
+    restart: always
+
+    environment:
+      POSTGRES_DB: userdb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+
+  backend:
+    build: ./backend
+    container_name: backend-api
+    restart: always
+
+    depends_on:
+      - db
+
+    environment:
+      DB_HOST: db
+      POSTGRES_DB: userdb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+
+    ports:
+      - "8000:8000"
+
+
+volumes:
+  pgdata:
