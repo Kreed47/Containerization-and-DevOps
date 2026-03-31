@@ -1,0 +1,25 @@
+apiVersion: apps/v1        # API version for Deployment
+kind: Deployment          # Resource type
+
+metadata:
+  name: web-deployment    # Deployment name
+
+spec:
+  replicas: 2             # Number of Pods
+
+  selector:
+    matchLabels:
+      app: web            # Select pods with this label
+
+  template:
+    metadata:
+      labels:
+        app: web          # Pod label
+
+    spec:
+      containers:
+      - name: nginx       # Container name
+        image: nginx:latest  # Container image
+
+        ports:
+        - containerPort: 80  # Container port

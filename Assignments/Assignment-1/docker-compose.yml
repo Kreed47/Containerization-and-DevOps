@@ -13,6 +13,10 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
 
+    networks:
+      mynetwork:
+        ipv4_address: 172.25.192.20
+
 
   backend:
     build: ./backend
@@ -23,7 +27,7 @@ services:
       - db
 
     environment:
-      DB_HOST: db
+      DB_HOST: 172.25.192.20
       POSTGRES_DB: userdb
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin123
@@ -31,6 +35,15 @@ services:
     ports:
       - "8000:8000"
 
+    networks:
+      mynetwork:
+        ipv4_address: 172.25.192.21
+
 
 volumes:
   pgdata:
+
+
+networks:
+  mynetwork:
+    external: true
