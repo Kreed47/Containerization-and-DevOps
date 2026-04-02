@@ -37,7 +37,9 @@ This section contains practical experiments and hands-on exercises to apply DevO
 - [Lab 4: Docker Essentials](Lab/Lab-4)
 - [Lab 5: Working with Docker Volumes, Environments, & Network](Lab/Lab-5)
 
+## Assignments
 
+- [Assignment 1 : App with Postgre DB, Backend and Frontend](Assignments/Assignment-1)
 
 ---
 
