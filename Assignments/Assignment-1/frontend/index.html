@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>User Manager</title>
+
+<style>
+body{
+font-family:Arial;
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+width:320px;
+text-align:center;
+}
+
+input{
+width:90%;
+padding:8px;
+margin-bottom:10px;
+}
+
+button{
+padding:6px 10px;
+background:#3498db;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+button:hover{
+background:#2980b9;
+}
+
+.delete-btn{
+background:#e74c3c;
+}
+
+.delete-btn:hover{
+background:#c0392b;
+}
+
+table{
+width:100%;
+margin-top:10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>User Manager</h2>
+
+<input id="name" placeholder="Enter name">
+
+<button onclick="addUser()">Add User</button>
+
+<table border="1">
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Action</th> <!-- ✅ NEW -->
+</tr>
+</thead>
+
+<tbody id="table"></tbody>
+
+</table>
+
+</div>
+
+<script>
+
+const API = "http://localhost:8000";
+
+async function loadUsers(){
+    let res = await fetch(API + "/users")
+    let data = await res.json()
+
+    let table = document.getElementById("table")
+    table.innerHTML = ""
+
+    data.forEach(u=>{
+        table.innerHTML += `
+        <tr>
+            <td>${u[0]}</td>
+            <td>${u[1]}</td>
+            <td>
+                <button class="delete-btn" onclick="deleteUser(${u[0]})">
+                    Delete
+                </button>
+            </td>
+        </tr>`
+    })
+}
+
+async function addUser(){
+    let name = document.getElementById("name").value
+
+    await fetch(API + "/users?name=" + name, {
+        method: "POST"
+    })
+
+    document.getElementById("name").value = ""  // ✅ clear input
+    loadUsers()
+}
+
+async function deleteUser(id){
+    if(confirm("Delete this user?")){
+        await fetch(API + "/users/" + id, {
+            method: "DELETE"
+        })
+        loadUsers()
+    }
+}
+
+loadUsers()
+
+</script>
+
+</body>
+</html>

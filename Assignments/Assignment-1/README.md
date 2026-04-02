@@ -54,7 +54,7 @@ GET /records
 
 ---
 
-# Create Network (Macvlan)
+# Create Networks (Macvlan)
 
 ```bash
 docker network create -d macvlan \
@@ -65,7 +65,7 @@ mynetwork
 ```
 
 ### Network Inspection
-![Network Inspect](./screenshots/network_inspect.png)
+![Network Inspect](./Screenshots/network_inspect.png)
 
 ---
 
@@ -76,7 +76,7 @@ docker compose up -d
 ```
 
 ### Containers Running
-![Docker PS](./screenshots/docker_ps.png)
+![Docker PS](./Screenshots/docker_ps.png)
 
 ---
 
@@ -88,7 +88,7 @@ docker inspect backend-api | grep IPAddress
 ```
 
 ### Container IP Addresses
-![IP Address](./screenshots/ip_address.png)
+![IP Address](./Screenshots/ip_address.png)
 
 ---
 
@@ -100,7 +100,7 @@ SELECT * FROM users;
 ```
 
 ### Database Output
-![DB Output](./screenshots/db_output.png)
+![DB Output](./Screenshots/db_output.png)
 
 ---
 
@@ -111,10 +111,19 @@ docker compose down
 docker compose up -d
 ```
 
+
 ### Compose Down & Up
-![Compose Down Up](./screenshots/compose_restart.png)
+![Compose Down Up](./Screenshots/compose_restart.png)
 
 ---
+### Observation
+#### Because this is macvlan, we cannot access the website from the localhost. So, it is better to use a ipvlan between the backend and db containers and connect backend and frontend through bridge network
+
+### Networks Inspection After Ipvlan and Bridge
+![Network Inspect](./Screenshots/network_inspect_2.png)
+![Network Inspect](./Screenshots/network_inspect_3.png)
+![Network Inspect](./Screenshots/network_inspect_4.png)
+
 
 # Web Application UI
 
@@ -125,8 +134,9 @@ http://localhost:8000
 ```
 
 ### Frontend UI
-![Web UI](./screenshots/web_ui.png)
-
+![Web UI](./Screenshots/web_ui.png)
+#### Added Delete Functionality
+![Updated Web UI](./Screenshots/web_ui_new.png)
 ---
 
 # Key Features

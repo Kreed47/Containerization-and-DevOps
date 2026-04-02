@@ -3,41 +3,42 @@ services:
   db:
     build: ./database
     container_name: postgres-db
-    restart: always
-
     environment:
       POSTGRES_DB: userdb
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin123
-
     volumes:
       - pgdata:/var/lib/postgresql/data
-
     networks:
-      mynetwork:
-        ipv4_address: 172.25.192.20
+      myipvlan:
+        ipv4_address: 172.30.0.20
 
 
   backend:
     build: ./backend
     container_name: backend-api
-    restart: always
-
     depends_on:
       - db
-
     environment:
-      DB_HOST: 172.25.192.20
+      DB_HOST: 172.30.0.20
       POSTGRES_DB: userdb
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin123
-
     ports:
       - "8000:8000"
-
     networks:
-      mynetwork:
-        ipv4_address: 172.25.192.21
+      mybridge: {}    
+      myipvlan:
+        ipv4_address: 172.30.0.21
+
+
+  frontend:
+    build: ./frontend
+    container_name: frontend-ui
+    ports:
+      - "8080:80"
+    networks:
+      - mybridge
 
 
 volumes:
@@ -45,5 +46,15 @@ volumes:
 
 
 networks:
-  mynetwork:
-    external: true
+
+  mybridge:
+    driver: bridge
+
+  myipvlan:
+    driver: ipvlan
+    driver_opts:
+      parent: eth0
+    ipam:
+      config:
+        - subnet: 172.30.0.0/24
+          gateway: 172.30.0.1
