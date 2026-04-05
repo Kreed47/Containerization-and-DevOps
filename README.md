@@ -36,6 +36,8 @@ This section contains practical experiments and hands-on exercises to apply DevO
 - [Lab 3: Deploying NGINX using diffrent base images and compairng image layers](Lab/Lab-3)
 - [Lab 4: Docker Essentials](Lab/Lab-4)
 - [Lab 5: Working with Docker Volumes, Environments, & Network](Lab/Lab-5)
+- [Lab 6: Comparison between Docker Run and Docker Compose](Lab/Lab-6)
+- [Lab 7: CI/CD Pipeline Implementation with Jenkins](Lab/Lab-7/)
 
 ## Assignments
 
