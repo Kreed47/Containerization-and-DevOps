@@ -21,7 +21,7 @@ docker run -it --name test-container ubuntu /bin/bash
 cat message.txt
 # ERROR: File doesn't exist! Data was lost.
 ```
-![](Screenshots-2/Screenshot 2026-04-04 081108.png)
+![](Screenshots-2/Screenshot%202026-04-04%20081108.png)
 
 
 
@@ -42,7 +42,7 @@ docker volume ls
 docker inspect web1 | grep -A 5 Mounts
 ```
 
-![](Screenshots-2/Screenshot 2026-04-04 081149.png)
+![](Screenshots-2/Screenshot%202026-04-04%20081149.png)
 
 #### **2. Named Volumes**
 ```bash
@@ -59,7 +59,7 @@ docker volume ls
 # Inspect volume
 docker volume inspect mydata
 ```
-![](Screenshots-2/Screenshot 2026-04-04 081331.png)
+![](Screenshots-2/Screenshot%202026-04-04%20081331.png)
 
 
 #### **3. Bind Mounts (Host Directory)**
@@ -77,7 +77,7 @@ echo "From Host" > ~/myapp-data/host-file.txt
 docker exec web3 cat /app/data/host-file.txt
 # Shows: From Host
 ```
-![](Screenshots-2/Screenshot 2026-04-04 081541.png)
+![](Screenshots-2/Screenshot%202026-04-04%20081541.png)
 
 
 ---
@@ -104,7 +104,7 @@ docker run -d \
   mysql:8.0
 # Data is preserved!
 ```
-![](Screenshots-2/Screenshot 2026-04-04 081741.png)
+![](Screenshots-2/Screenshot%202026-04-04%20081741.png)
 
 #### **Example 2: Web App with Configuration Files**
 ```bash
@@ -130,7 +130,7 @@ docker run -d \
 # Test
 curl http://localhost:8080
 ```
-![](Screenshots-2/Screenshot 2026-04-04 081849.png)
+![](Screenshots-2/Screenshot%202026-04-04%20081849.png)
 ---
 ### **Lab 4: Volume Management Commands**
 ```bash
@@ -152,7 +152,7 @@ docker volume rm volume-name
 # Copy files to/from volume
 docker cp local-file.txt container-name:/path/in/volume
 ```
-![](Screenshots-2/Screenshot 2026-04-04 082217.png)
+![](Screenshots-2/Screenshot%202026-04-04%20082217.png)
 
 ---
 
