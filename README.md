@@ -38,6 +38,8 @@ This section contains practical experiments and hands-on exercises to apply DevO
 - [Lab 5: Working with Docker Volumes, Environments, & Network](Lab/Lab-5)
 - [Lab 6: Comparison between Docker Run and Docker Compose](Lab/Lab-6)
 - [Lab 7: CI/CD Pipeline Implementation with Jenkins](Lab/Lab-7/)
+- [Lab 9: Ansible Automation Using Docker Servers](Lab/Lab-9/)
+- [Lab 10: Monitoring code quality with Sonarqube](Lab/Lab-10/)
 
 ## Assignments
 
