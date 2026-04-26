@@ -40,6 +40,8 @@ This section contains practical experiments and hands-on exercises to apply DevO
 - [Lab 7: CI/CD Pipeline Implementation with Jenkins](Lab/Lab-7/)
 - [Lab 9: Ansible Automation Using Docker Servers](Lab/Lab-9/)
 - [Lab 10: Monitoring code quality with Sonarqube](Lab/Lab-10/)
+- [Lab 11: Orchestration using Docker Compose & Docker Swarm](Lab/Lab-11/)
+- [Lab 12: Orchestration using K8/Kubernetes](Lab/Lab-12)
 
 ## Assignments
 
